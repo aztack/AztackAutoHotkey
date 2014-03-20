@@ -1,0 +1,62 @@
+;Auto-Genreated at <%=Time.now%>
+#Include paths.ahk
+#Include functions.ahk
+#Include autorun.ahk
+
+;-----
+;Menus
+;-----
+menus := {}
+<% menus.each do |menu| %>
+;<%=menu['name']%>
+menus["<%=menu['name']%>"] := ["<%=menu['items'].map{|e|e[1]}.join('","')%>"]
+	<% menu['items'].each do |item| -%>
+		<% if item[0]['--'] -%>
+			Menu, <%=menu['name']%>, Add,,,
+		<% else -%>
+			Menu, <%=menu['name']%>, Add, <%=item[0]%>, TheMenuHandler
+		<% end -%>
+		<% if item.size ==  3 -%>
+			Menu, <%=menu['name']%>, Icon,<%=item[0]%>, <%=item[2]%>
+		<% elsif item.size == 2 and item[1]['.exe'] -%>
+			Menu, <%=menu['name']%>, Icon,<%=item[0]%>, <%=item[1]%>
+		<% end -%>
+	<% end %>
+<% end %>
+
+;-----------
+; other ahks
+;-----------
+
+#Include appdir.ahk
+#Include system.ahk
+#Include _console.ahk
+#Include _chrome.ahk
+#Include _everything.ahk
+<% if installed['XShell'] -%>
+#Include _xshell.ahk
+<% end -%>
+<% if installed['SublimeText'] -%>
+#Include _sublimetext.ahk
+<% end -%>
+
+;hotkeys for menus
+<% menus.each do |menu| -%>
+<%=menu['hotkey']%>:: Menu,<%=menu['name']%>,Show
+<% end -%>
+
+;---------------------
+;The Only Menu Handler
+;---------------------
+
+TheMenuHandler:
+	items := menus[A_ThisMenu]
+	p := items[A_ThisMenuItemPos]
+	if(p<> "")
+		Run, %p%
+	if(InStr(p,"http:") = 1) {
+		WinWait,ahk_class Chrome_WidgetWin_1
+		WinActive("ahk_class Chrome_WidgetWin_1")
+		Send, ^l{End}
+	}
+return
