@@ -43,10 +43,20 @@ Return
 
 ;open path in clipboard with cmd.exe
 !+h::
-	fullFileName := Clipboard
-	SplitPath, fullFileName, , dir, , ,
-	if FileExist(dir)
-		Run, cmd /k cd /d "%dir%"
+	s := Clipboard
+	if(FileExist(s))
+	{
+		Run, cmd /k cd /d "%s%"
+	} else {
+		SplitPath, s, filename, dir, extension, noext, drv
+		IfExist %dir%
+			Run, cmd /k cd /d "%dir%"
+	}
+return
+
+;open cmd with currrent opened folder in explorer
+^!c::
+
 return
 
 ;mouse wheel change volume when taskbar is active
@@ -103,7 +113,7 @@ return
 
 ;Convert whatever's on the clipboard to plain text (no formatting) and then pastes.
 #v::
-	Clip0 = %ClipBoardAll%
+	old = %ClipBoardAll%
 	text = %ClipBoard%
 
 	;filters
@@ -117,8 +127,8 @@ return
 	ClipBoard = %text% ; Convert to text
 	Send ^v ; For best compatibility: SendPlay
 	Sleep 50 ; Don't change clipboard while it is pasted! (Sleep > 0)
-	ClipBoard = %Clip0% ; Restore original ClipBoard
-	VarSetCapacity(Clip0, 0) ; Free memory
+	ClipBoard = %old% ; Restore original ClipBoard
+	VarSetCapacity(old, 0) ; Free memory
 Return
 
 #F4::

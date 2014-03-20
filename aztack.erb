@@ -33,6 +33,14 @@ menus["<%=menu['name']%>"] := ["<%=menu['items'].map{|e|e[1]}.join('","')%>"]
 <% end %>
 
 ;-----------
+; timers
+;-----------
+
+<% @timers.each do |label,_| -%>
+SetTimer <%=label%>, On
+<% end -%>
+
+;-----------
 ; other ahks
 ;-----------
 
@@ -41,6 +49,8 @@ menus["<%=menu['name']%>"] := ["<%=menu['items'].map{|e|e[1]}.join('","')%>"]
 #Include _console.ahk
 #Include _chrome.ahk
 #Include _everything.ahk
+#Include _explorer.ahk
+
 <% if @installed['XShell'] -%>
 #Include _xshell.ahk
 <% end -%>
@@ -68,3 +78,12 @@ TheMenuHandler:
 		Send, ^l{End}
 	}
 return
+
+;---------------
+; Timer handlers
+;---------------
+<% @timers.each do |label,code| -%>
+<%= label -%>:
+<%= code %>
+return
+<% end -%>

@@ -56,13 +56,20 @@ end unless File.exists?('paths.ahk')
 # genereate menus
 #
 menus = []
-Dir['*.json'].each do |jsonf|
+Dir['*.menu.json'].each do |jsonf|
+	$stdout.puts "Found menu #{jsonf}"
 	File.open(jsonf) do |file|
 		config = JSON.parse file.read
 		menus << config
 	end
 end
 
+timers = {}
+Dir['*.timer.ahk'].each do |timerf|
+	$stdout.puts "Found timer #{timerf}"
+	label = File.basename(timerf.gsub('.','_'))
+	timers[label] = File.read(timerf);
+end
 #
 # finally generate main script
 #
@@ -70,6 +77,7 @@ File.open("aztack.ahk",'w:gb2312') do |f|
 	eruby = Erubis::Eruby.new File.read('aztack.erb')
     ctx = Erubis::Context.new
     ctx['menus'] = menus
+    ctx['timers'] = timers
     ctx['installed'] = installed
     code = eruby.evaluate ctx
 	f.puts code.encode('gb2312')

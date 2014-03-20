@@ -1,7 +1,8 @@
-;Auto-Genreated at 2014-03-20 17:08:40 +0800
+;Auto-Genreated at 2014-03-20 17:58:28 +0800
 #Include paths.ahk
 #Include functions.ahk
 #Include autorun.ahk
+#Include lib\Explorer.ahk
 
 ;-----
 ;Menus
@@ -46,6 +47,12 @@ menus["Test"] := ["http://wwh.lianmeng.360.cn/index","http://wwh.lianmeng.360.cn
 	Menu, Test, Icon,填写直客注册表格, lib\au3.ico
 
 ;-----------
+; timers
+;-----------
+
+SetTimer sublime_timer_ahk, On
+
+;-----------
 ; other ahks
 ;-----------
 
@@ -54,6 +61,8 @@ menus["Test"] := ["http://wwh.lianmeng.360.cn/index","http://wwh.lianmeng.360.cn
 #Include _console.ahk
 #Include _chrome.ahk
 #Include _everything.ahk
+#Include _explorer.ahk
+
 
 ;hotkeys for menus
 !d:: Menu,QuickMenu,Show
@@ -73,4 +82,15 @@ TheMenuHandler:
 		WinActive("ahk_class Chrome_WidgetWin_1")
 		Send, ^l{End}
 	}
+return
+
+;---------------
+; Timer handlers
+;---------------
+sublime_timer_ahk:
+IfWinExist, Sublime Text ahk_class #32770
+	WinClose
+
+IfWinExist, This is an unregistered copy ahk_class #32770
+	WinClose
 return

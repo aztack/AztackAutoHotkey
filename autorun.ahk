@@ -1,2 +1,2 @@
-;AutoRun("ClipboardHelpAndSpell",CHS)
+AutoRun("ClipboardHelpAndSpell",CHS)
 ;AutoRun("ToDoList",ToDoList)
