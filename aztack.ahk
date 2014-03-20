@@ -62,6 +62,7 @@ SetTimer sublime_timer_ahk, On
 #Include _chrome.ahk
 #Include _everything.ahk
 #Include _explorer.ahk
+#Include _xshell.ahk
 
 
 ;hotkeys for menus

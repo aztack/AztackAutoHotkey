@@ -16,6 +16,30 @@
 	return
 	
 	~LControl & MButton::
-	SendInput cls{Enter}
+	SendInput {Ctrl down}c{Ctrl up}cls{Enter}
+	return
+	
+	~Shift & BackSpace::
+	SendInput cd ..{Enter}
+	return
+	
+	#1::
+	SendInput c:{Enter}
+	return
+	
+	#2::
+	SendInput d:{Enter}
+	return
+	
+	#3::
+	SendInput e:{Enter}
+	return
+	
+	#4::
+	SendInput f:{Enter}
+	return
+	
+	#e::
+	WinGetText,dir
 	return
 #IfWinActive

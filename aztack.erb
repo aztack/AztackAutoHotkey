@@ -50,13 +50,9 @@ SetTimer <%=label%>, On
 #Include _chrome.ahk
 #Include _everything.ahk
 #Include _explorer.ahk
-
-<% if @installed['XShell'] -%>
 #Include _xshell.ahk
-<% end -%>
-<% if @installed['SublimeText'] -%>
-#Include _sublimetext.ahk
-<% end -%>
+
+
 
 ;hotkeys for menus
 <% @menus.each do |menu| -%>
