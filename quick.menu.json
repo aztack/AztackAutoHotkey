@@ -2,7 +2,7 @@
 	"name":"QuickMenu",
 	"hotkey": "!d",
 	"items" : [
-		["-----","-----"],
+		["download","f:\\dl"],
 		["ebook","e:\\ebook"],
 		["-----","-----"],
 		["BCompare","D:\\Program Files\\bcompare\\BCompare.exe"],

@@ -7,19 +7,27 @@
 ;Menus
 ;-----
 menus := {}
-<% menus.each do |menu| %>
+<% @menus.each do |menu| %>
 ;<%=menu['name']%>
 menus["<%=menu['name']%>"] := ["<%=menu['items'].map{|e|e[1]}.join('","')%>"]
 	<% menu['items'].each do |item| -%>
 		<% if item[0]['--'] -%>
-			Menu, <%=menu['name']%>, Add,,,
+	Menu, <%=menu['name']%>, Add,,,
 		<% else -%>
-			Menu, <%=menu['name']%>, Add, <%=item[0]%>, TheMenuHandler
+	Menu, <%=menu['name']%>, Add, <%=item[0]%>, TheMenuHandler
 		<% end -%>
 		<% if item.size ==  3 -%>
-			Menu, <%=menu['name']%>, Icon,<%=item[0]%>, <%=item[2]%>
-		<% elsif item.size == 2 and item[1]['.exe'] -%>
-			Menu, <%=menu['name']%>, Icon,<%=item[0]%>, <%=item[1]%>
+	Menu, <%=menu['name']%>, Icon,<%=item[0]%>, <%=item[2]%>
+		<% elsif item.size -%>
+			<% if item[1]['.exe'] %>
+	Menu, <%=menu['name']%>, Icon,<%=item[0]%>, <%=item[1]%>
+			<% elsif File.directory?(item[1]) -%>
+	Menu, <%=menu['name']%>, Icon,<%=item[0]%>, Shell32.dll, 4
+			<% elsif item[1][/^http:/] -%>
+	Menu, <%=menu['name']%>, Icon,<%=item[0]%>, Shell32.dll, 14
+			<% elsif File.extname(item[1]) == '.au3' -%>
+	Menu, <%=menu['name']%>, Icon,<%=item[0]%>, lib\au3.ico
+			<% end -%>
 		<% end -%>
 	<% end %>
 <% end %>
@@ -33,15 +41,15 @@ menus["<%=menu['name']%>"] := ["<%=menu['items'].map{|e|e[1]}.join('","')%>"]
 #Include _console.ahk
 #Include _chrome.ahk
 #Include _everything.ahk
-<% if installed['XShell'] -%>
+<% if @installed['XShell'] -%>
 #Include _xshell.ahk
 <% end -%>
-<% if installed['SublimeText'] -%>
+<% if @installed['SublimeText'] -%>
 #Include _sublimetext.ahk
 <% end -%>
 
 ;hotkeys for menus
-<% menus.each do |menu| -%>
+<% @menus.each do |menu| -%>
 <%=menu['hotkey']%>:: Menu,<%=menu['name']%>,Show
 <% end -%>
 

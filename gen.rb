@@ -1,6 +1,6 @@
 # encoding:gb2312
 require 'json'
-require 'erb'
+require 'erubis'
 
 output = `es -p *system32*etc*hosts`
 if output['not']
@@ -67,6 +67,10 @@ end
 # finally generate main script
 #
 File.open("aztack.ahk",'w:gb2312') do |f|
-	erb = ERB.new File.read('aztack.erb'), nil, '-'
-	f.puts erb.result(binding)
+	eruby = Erubis::Eruby.new File.read('aztack.erb')
+    ctx = Erubis::Context.new
+    ctx['menus'] = menus
+    ctx['installed'] = installed
+    code = eruby.evaluate ctx
+	f.puts code.encode('gb2312')
 end

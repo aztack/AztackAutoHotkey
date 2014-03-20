@@ -12,6 +12,10 @@
 !3:: Run Mspaint
 !5:: Run Calc
 
+!c:: Run e:\doc
+!z:: Run d:\program files
+!x:: Run e:\doc\github
+
 ;edit specific files
 #F8:: Run %SublimeText% "C:\Windows\System32\drivers\etc\hosts"
 #F7:: Edit %A_ScriptFullPath%
