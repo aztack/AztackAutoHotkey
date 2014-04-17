@@ -60,7 +60,19 @@ Dir['*.menu.json'].each do |jsonf|
 	$stdout.puts "Found menu #{jsonf}"
 	File.open(jsonf) do |file|
 		config = JSON.parse file.read
-		menus << config
+		items = {}
+		config['items'].each do |name,path|
+			$stdout.puts "  #{path}"
+			if not File.exists?(path) and not path[/^http|^[c-z]:|^-/i]
+				basename = File.basename(path)
+				paths = search(basename)
+				path = paths.size > 0 ? paths.first : nil
+				$stdout.puts " =>#{path}"
+			end
+			items[name] = path if not path.nil?
+		end
+		config['items'] = items
+		menus << config if config['items'].size > 0
 	end
 end
 

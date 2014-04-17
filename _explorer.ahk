@@ -6,7 +6,15 @@
 	Return
 	
 	;copy path of selected 
-	^+c::
+	#c::
 		Clipboard := Explorer_GetSelected()
 	Return
+	
+	~Alt & WheelUp::
+	SendInput {Alt down}{Up} {Alt up}
+	return
+	
+	~Alt & WheelDown::
+	SendInput {Alt down}{Left} {Alt up}
+	return
 #IfWinActive

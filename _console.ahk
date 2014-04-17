@@ -19,6 +19,10 @@
 	SendInput {Ctrl down}c{Ctrl up}cls{Enter}
 	return
 	
+	~Ctrl & L::
+	SendInput {Ctrl down}c{Ctrl up}cls{Enter}
+	return
+	
 	~Shift & BackSpace::
 	SendInput cd ..{Enter}
 	return
@@ -39,7 +43,7 @@
 	SendInput f:{Enter}
 	return
 	
-	#e::
-	WinGetText,dir
+	~Shift & AppsKey::
+	SendInput dir{Enter}
 	return
 #IfWinActive

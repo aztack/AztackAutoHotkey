@@ -117,11 +117,11 @@ return
 	text = %ClipBoard%
 
 	;filters
-	s := "\s*æŠ¥é”™"
+	s := "\s*±¨´í"
 	text := RegExReplace(text, s, "")
-	s := "\s*è·Ÿè¯»"
+	s := "\s*¸ú¶Á"
 	text := RegExReplace(text, s, "")
-	s := "\s*å£è¯­ç»ƒä¹ "
+	s := "\s*¿ÚÓïÁ·Ï°"
 	text := RegExReplace(text, s, "")
 
 	ClipBoard = %text% ; Convert to text
@@ -157,11 +157,12 @@ return
 	(
 127.0.0.1 localhost
 10.16.15.199 wwh.lianmeng.360.cn
+10.16.15.199 cp.lianmeng.360.cn
 10.108.214.50 lianmeng.360.cn
 10.108.214.50 admin.lianmeng.360.cn
 10.16.15.199 docs.lianmeng.360.cn
 10.16.15.169 crm.360.cn
-#å›å½’æœºå™¨
+#»Ø¹é»úÆ÷
 #10.121.215.80 admin.lianmeng.360.cn
 #10.108.212.42 lianmeng.360.cn
 	)
