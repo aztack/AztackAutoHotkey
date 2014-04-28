@@ -43,7 +43,16 @@
 	SendInput f:{Enter}
 	return
 	
+	#e::
+	SendInput start .{Enter}
+	return
+	
 	~Shift & AppsKey::
 	SendInput dir{Enter}
 	return
+
+	~Ctrl & w::
+	WinClose A 
+	return
+	
 #IfWinActive
