@@ -5,14 +5,14 @@
 		Clipboard=%text%
 	Return
 	
-	+!v::
+	#e::
 		ControlGetText, text,msctls_statusbar321, ahk_class EVERYTHING
 		SplitPath, text, filename, dir, extension, noext, drv
 		IfExist %dir%
 			Run "%dir%"
 	Return
 	
-	+!r::
+	!r::
 		ControlGetText, text,msctls_statusbar321, ahk_class EVERYTHING
 		SplitPath, text, filename, dir, extension, noext, drv
 		IfExist %dir%
