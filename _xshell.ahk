@@ -16,4 +16,10 @@
 	~Alt & AppsKey::
 	SendInput ll{Enter}
 	return
+	
+	~Alt & Left::
+	SendInput {Ctrl down}c{Ctrl up}
+	SendInput cd -{Enter}
+	return
+
 #IfWinActive
