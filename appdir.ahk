@@ -7,7 +7,14 @@
 !+q:: Run %QQ%
 
 !b:: Run Notepad
-!r:: Run Cmd
+!r:: 
+	GetKeyState, state, LButton
+	if(state = "D"){
+		Run Cmd
+	} else {
+		Run Cmd, %A_Desktop%
+	}
+return
 !t:: Run Taskmgr
 !3:: Run Mspaint
 !5:: Run Calc
