@@ -1,4 +1,4 @@
-;Auto-Genreated at 2014-04-17 17:13:42 +0800
+;Auto-Genreated at 2014-05-20 09:49:59 +0800
 #Include paths.ahk
 #Include functions.ahk
 #Include autorun.ahk
@@ -8,7 +8,7 @@
 ;-----
 menus := {}
 ;QuickMenu
-menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe","C:\Program Files (x86)\PicPick\picpick.exe","D:\prog\sqliteadmin\sqliteadmin.exe","C:\Program Files\China Mobile\Fetion\Fetion.exe","C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe","D:\Program Files\Firefox26\App\Firefox\firefox.exe","C:\Program Files\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\PhotoshopCS5\Photoshop (64 Bit)\Photoshop.exe","D:\prog\SQLite Expert Professiona.exe","D:prog\LINQPad4.31\LINQPad.exe"]
+menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe","C:\Program Files (x86)\PicPick\picpick.exe","D:\prog\sqliteadmin\sqliteadmin.exe","C:\Program Files\China Mobile\Fetion\Fetion.exe","C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe","D:\Program Files\Firefox26\App\Firefox\firefox.exe","C:\Program Files\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\PhotoshopCS5\Photoshop (64 Bit)\Photoshop.exe","D:\prog\SQLite Expert Professiona.exe","D:prog\LINQPad4.31\LINQPad.exe","D:\program files\MobipocketReader_6.2.exe","D:\program files\Source Insight 3\Insight3.exe"]
 	Menu, QuickMenu, Add, download, TheMenuHandler
 	Menu, QuickMenu, Icon,download, Shell32.dll, 4
 	Menu, QuickMenu, Add, ebook, TheMenuHandler
@@ -40,6 +40,12 @@ menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCo
 	Menu, QuickMenu, Icon,SQLite Expert, D:\prog\SQLite Expert Professiona.exe
 	Menu, QuickMenu, Add, LINQPad, TheMenuHandler
 	Menu, QuickMenu, Icon,LINQPad, D:prog\LINQPad4.31\LINQPad.exe
+	Menu, QuickMenu, Add, MobiReader, TheMenuHandler
+	Menu, QuickMenu, Icon,MobiReader, D:\program files\MobipocketReader_6.2.exe
+	Menu, QuickMenu, Add, Source Insight, TheMenuHandler
+	Menu, QuickMenu, Icon,Source Insight, D:\program files\Source Insight 3\Insight3.exe
+	Menu, QuickMenu, Add, ToDoList, TheMenuHandler
+	Menu, QuickMenu, Icon,ToDoList, D:\Program Files\ToDoList\ToDoList.exe
 ;SublimeProject
 menus["SublimeProject"] := ["D:\prog\sublime-projects\web-cp.sublime-project","E:\doc\closesource\qh\union.sublime-project","E:\doc\GitHub\rails-dev-box\sites\blog.aztack.com.sublime-project","E:\doc\GitHub\aztec-alpha\aztec-alpha.sublime-project"]
 	Menu, SublimeProject, Add, Web-CP, TheMenuHandler
@@ -78,6 +84,7 @@ SetTimer sublime_timer_ahk, On
 #Include system.ahk
 #Include _console.ahk
 #Include _chrome.ahk
+#Include _firefox.ahk
 #Include _everything.ahk
 #Include _explorer.ahk
 #Include _xshell.ahk

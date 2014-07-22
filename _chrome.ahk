@@ -29,12 +29,12 @@ return
 	SendEvent {Down}
 	return
 	
-	~Shift & LButton::
-	SendEvent {Enter}
-	return
-	
 	~Shift & MButton::
 	SendInput clear(){Enter}
+	return
+	
+	~Shift & LButton::
+	SendInput {Enter}
 	return
 	
 	;调试操作

@@ -30,7 +30,8 @@ executables = {
 	'Outlook' => '*office*outlook.exe',
 	'ToDoList' => '*todolist*todolist.exe',
 	'Everything' => '*everything*everything.exe',
-	'Chrome' => '*google*\chrome.exe'
+	'Chrome' => '*google*\chrome.exe',
+	'DM2' => '*dm2*DM2.exe"'
 }
 installed = {}
 
