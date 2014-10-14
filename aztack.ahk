@@ -8,7 +8,7 @@
 ;-----
 menus := {}
 ;QuickMenu
-menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe","C:\Program Files (x86)\PicPick\picpick.exe","D:\prog\sqliteadmin\sqliteadmin.exe","C:\Program Files\China Mobile\Fetion\Fetion.exe","C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe","D:\Program Files\Firefox26\App\Firefox\firefox.exe","C:\Program Files\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\PhotoshopCS5\Photoshop (64 Bit)\Photoshop.exe","D:\prog\SQLite Expert Professiona.exe","D:prog\LINQPad4.31\LINQPad.exe","D:\program files\MobipocketReader_6.2.exe","D:\program files\Source Insight 3\Insight3.exe"]
+menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe","C:\Program Files (x86)\PicPick\picpick.exe","D:\prog\sqliteadmin\sqliteadmin.exe","C:\Program Files\China Mobile\Fetion\Fetion.exe","C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe","D:\Program Files\Firefox26\App\Firefox\firefox.exe","C:\Program Files\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\AdobePhotoshopCC\Adobe Photoshop CC\Photoshop.exe","D:\prog\SQLite Expert Professiona.exe","D:prog\LINQPad4.31\LINQPad.exe","D:\program files\MobipocketReader_6.2.exe","D:\program files\Source Insight 3\Insight3.exe"]
 	Menu, QuickMenu, Add, download, TheMenuHandler
 	Menu, QuickMenu, Icon,download, Shell32.dll, 4
 	Menu, QuickMenu, Add, ebook, TheMenuHandler
@@ -35,7 +35,7 @@ menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCo
 	Menu, QuickMenu, Add, Astrill, TheMenuHandler
 	Menu, QuickMenu, Icon,Astrill, C:\Program Files (x86)\Astrill\astrill.exe
 	Menu, QuickMenu, Add, Photoshop, TheMenuHandler
-	Menu, QuickMenu, Icon,Photoshop, D:\Program Files\PhotoshopCS5\Photoshop (64 Bit)\Photoshop.exe
+	Menu, QuickMenu, Icon,Photoshop, D:\Program Files\AdobePhotoshopCC\Adobe Photoshop CC\Photoshop.exe
 	Menu, QuickMenu, Add, SQLite Expert, TheMenuHandler
 	Menu, QuickMenu, Icon,SQLite Expert, D:\prog\SQLite Expert Professiona.exe
 	Menu, QuickMenu, Add, LINQPad, TheMenuHandler

@@ -33,10 +33,6 @@ return
 	SendInput clear(){Enter}
 	return
 	
-	~Shift & LButton::
-	SendInput {Enter}
-	return
-	
 	;调试操作
 	~Alt & WheelDown::
 	GetKeyState, state, Shift

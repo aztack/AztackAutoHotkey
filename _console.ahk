@@ -55,4 +55,8 @@
 	WinClose A 
 	return
 	
+	Ctrl & b::
+	SendInput {Enter}
+	return
+
 #IfWinActive
