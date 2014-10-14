@@ -29,10 +29,6 @@ return
 	SendEvent {Down}
 	return
 	
-	~Shift & LButton::
-	SendEvent {Enter}
-	return
-	
 	~Shift & MButton::
 	SendInput clear(){Enter}
 	return

@@ -60,6 +60,13 @@ Dir['*.menu.json'].each do |jsonf|
 	$stdout.puts "Found menu #{jsonf}"
 	File.open(jsonf) do |file|
 		config = JSON.parse file.read
+		config['items'].reject! do |item|
+			if not item[1]['http']
+				!File.exists?(item[1])
+			else
+				false
+			end
+		end
 		menus << config
 	end
 end
@@ -80,5 +87,5 @@ File.open("aztack.ahk",'w:gb2312') do |f|
     ctx['timers'] = timers
     ctx['installed'] = installed
     code = eruby.evaluate ctx
-	f.puts code.encode('gb2312')
+	f.puts code.force_encoding('gb2312')
 end
