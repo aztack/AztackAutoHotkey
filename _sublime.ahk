@@ -15,4 +15,15 @@ get_path_in_sublime_title()
 	dir := get_path_in_sublime_title()
 	Run,"%dir%"
 	return
+	
+	~^s::
+		GetKeyState, state, LButton
+		if(state == "D"){
+			WinGet, original, ID, A
+			WinActivate, ahk_class Chrome_WidgetWin_1
+			WinWaitActive, ahk_class Chrome_WidgetWin_1
+			Send ^{F5}
+			WinActivate, ahk_id %original%
+		}
+	return
 #IfWinActive
