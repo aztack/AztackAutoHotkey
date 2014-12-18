@@ -17,13 +17,21 @@ get_path_in_sublime_title()
 	return
 	
 	~^s::
-		GetKeyState, state, LButton
-		if(state == "D"){
+		GetKeyState, lstate, LButton
+		GetKeyState, rstate, RButton
+		if(lstate == "D"){
 			WinGet, original, ID, A
 			WinActivate, ahk_class Chrome_WidgetWin_1
 			WinWaitActive, ahk_class Chrome_WidgetWin_1
 			Send ^{F5}
 			WinActivate, ahk_id %original%
+		}
+		
+		if (rstate == "D") {
+			WinGet, original, ID, A
+			WinActivate, ahk_class Chrome_WidgetWin_1
+			WinWaitActive, ahk_class Chrome_WidgetWin_1
+			Send ^{F5}
 		}
 	return
 #IfWinActive
