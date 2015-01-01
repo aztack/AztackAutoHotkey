@@ -1,4 +1,4 @@
-;Auto-Genreated at 2014-12-21 21:37:22 +0800
+;Auto-Genreated at 2015-01-01 09:44:36 +0800
 #Include paths.ahk
 #Include functions.ahk
 #Include autorun.ahk
@@ -115,6 +115,8 @@ return
 ; Timer handlers
 ;---------------
 sublime_timer_ahk:
+IfWinExist, Sublime Text ahk_class #32770
+	WinClose
 
 IfWinExist, This is an unregistered copy ahk_class #32770
 	WinClose
