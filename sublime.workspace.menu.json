@@ -1,0 +1,10 @@
+{
+	"name": "SublimeProject",
+	"hotkey": "!Numpad1",
+	"items": [
+		["Web-CP", "D:\\prog\\sublime-projects\\web-cp.sublime-project"],
+		["Union", "E:\\doc\\closesource\\qh\\union.sublime-project"],
+		["Blog", "E:\\doc\\GitHub\\rails-dev-box\\sites\\blog.aztack.com.sublime-project"],
+		["Aztec-Alpha", "E:\\doc\\GitHub\\aztec-alpha\\aztec-alpha.sublime-project"]
+	]
+}

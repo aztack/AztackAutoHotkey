@@ -152,6 +152,17 @@ return
 setproxy()
 return
 
+^!+F12::
+if ( regread("HKCU","Software\Microsoft\Windows\CurrentVersion\Internet Settings","Proxyenable") = 1 ) 
+{
+	TrayTip,,你在墙外, 2, 17
+}
+else
+{
+	TrayTip,,你在墙内, 2, 17
+}
+return
+
 
 setproxy(state = "Toggle"){
 
@@ -160,12 +171,18 @@ regwrite,REG_DWORD,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Setti
   else if (state="OFF" or state = 0)
     regwrite,REG_DWORD,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,Proxyenable,0
   else if (state = "TOGGLE")
-    {
-      if regread("HKCU","Software\Microsoft\Windows\CurrentVersion\Internet Settings","Proxyenable") = 1
+  {
+      if ( regread("HKCU","Software\Microsoft\Windows\CurrentVersion\Internet Settings","Proxyenable") = 1 ) 
+	  {
+		TrayTip,,你在墙内, 2, 17
         regwrite,REG_DWORD,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,Proxyenable,0
-      else if regread("HKCU","Software\Microsoft\Windows\CurrentVersion\Internet Settings","Proxyenable") = 0
+	  } else if (regread("HKCU","Software\Microsoft\Windows\CurrentVersion\Internet Settings","Proxyenable") = 0 ) 
+	  {
+		TrayTip,,你在墙外, 2, 17
         regwrite,REG_DWORD,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,Proxyenable,1
-    }
+		regwrite,REG_SZ,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,ProxyServer,http=10.16.13.18:8080;https=10.16.13.18:8080;socks=10.16.13.18:8080
+	  }
+  }
   dllcall("wininet\InternetSetOptionW","int","0","int","39","int","0","int","0")
   dllcall("wininet\InternetSetOptionW","int","0","int","37","int","0","int","0")
   Return
@@ -175,6 +192,12 @@ RegRead(RootKey, SubKey, ValueName = "") {
    RegRead, v, %RootKey%, %SubKey%, %ValueName%
    Return, v
 }
+
+#IfWinActive ahk_class Chrome_WidgetWin_1
+~#LButton::
+ setproxy()
+Return
+#IfWinActive
 
 ;
 ;run path/url on clipboard
@@ -215,10 +238,6 @@ Return
 	}
 return
 
-;open cmd with currrent opened folder in explorer
-^!c::
-
-return
 
 ;mouse wheel change volume when taskbar is active
 #IfWinActive,ahk_class Shell_TrayWnd
@@ -284,6 +303,8 @@ return
 	text := RegExReplace(text, s, "")
 	s := "\s*口语练习"
 	text := RegExReplace(text, s, "")
+	s := "\s*全球发音"
+	text := RegExReplace(text, s, "")
 
 	ClipBoard = %text% ; Convert to text
 	Send ^v ; For best compatibility: SendPlay
@@ -309,3 +330,23 @@ Return
 		Clipboard = %a%
 	}
 return
+
+ 
+; Win+F12 - Sleep
+#+F12::
+    ; Sleep/Suspend:
+    DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+    ; Hibernate:
+    ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
+    Return
+ 
+; Win+Shift+F12 - Lock and sleep
+;#+F12::
+    ; Lock:
+    ;Run rundll32.exe user32.dll`,LockWorkStation
+    ;Sleep 1000
+    ; Sleep/Suspend:
+    ;DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+    ; Hibernate:
+    ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
+    ;Return

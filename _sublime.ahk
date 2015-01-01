@@ -16,3 +16,4 @@ get_path_in_sublime_title()
 	Run,"%dir%"
 	return
 #IfWinActive
+

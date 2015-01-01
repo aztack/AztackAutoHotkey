@@ -30,7 +30,8 @@ executables = {
 	'Outlook' => '*office*outlook.exe',
 	'ToDoList' => '*todolist*todolist.exe',
 	'Everything' => '*everything*everything.exe',
-	'Chrome' => '*google*\chrome.exe'
+	'Chrome' => '*google*\chrome.exe',
+	'DM2' => '*dm2*DM2.exe"'
 }
 installed = {}
 
@@ -60,14 +61,19 @@ Dir['*.menu.json'].each do |jsonf|
 	$stdout.puts "Found menu #{jsonf}"
 	File.open(jsonf) do |file|
 		config = JSON.parse file.read
-		config['items'].reject! do |item|
-			if not item[1]['http']
-				!File.exists?(item[1])
-			else
-				false
+		items = {}
+		config['items'].each do |name,path|
+			$stdout.puts "  #{path}"
+			if not File.exists?(path) and not path[/^http|^[c-z]:|^-/i]
+				basename = File.basename(path)
+				paths = search(basename)
+				path = paths.size > 0 ? paths.first : nil
+				$stdout.puts " =>#{path}"
 			end
+			items[name] = path if not path.nil?
 		end
-		menus << config
+		config['items'] = items
+		menus << config if config['items'].size > 0
 	end
 end
 
