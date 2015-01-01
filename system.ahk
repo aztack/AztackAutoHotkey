@@ -193,11 +193,9 @@ RegRead(RootKey, SubKey, ValueName = "") {
    Return, v
 }
 
-#IfWinActive ahk_class Chrome_WidgetWin_1
 ~#LButton::
  setproxy()
 Return
-#IfWinActive
 
 ;
 ;run path/url on clipboard
