@@ -196,3 +196,8 @@ Return
 		Clipboard = %a%
 	}
 return
+
+#Enter::
+	MouseGetPos, x, y
+	MouseClick, left, x, y
+return

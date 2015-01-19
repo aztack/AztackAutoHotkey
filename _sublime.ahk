@@ -34,4 +34,12 @@ get_path_in_sublime_title()
 			Send ^{F5}
 		}
 	return
+	
+	~^F12::
+		SetTitleMatchMode, 2
+		ControlGet, OutputVar, Hwnd,,Chrome_RenderWidgetHostHWND1, Google Chrome
+		ControlFocus,,ahk_id %outputvar%
+		ControlSend,, ^{F5}, ahk_id %outputvar%
+		WinActivate,ahk_class PX_WINDOW_CLASS
+	return
 #IfWinActive
