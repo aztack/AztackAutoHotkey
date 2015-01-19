@@ -93,7 +93,7 @@ end
 #
 # finally generate main script
 #
-File.open("aztack.ahk",'w:gbk') do |f|
+File.open("aztack-#{suffix}.ahk",'w:gbk') do |f|
 	eruby = Erubis::Eruby.new File.read('aztack.erb')
     ctx = Erubis::Context.new
     ctx['menus'] = menus

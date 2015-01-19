@@ -55,7 +55,7 @@
 	WinClose A 
 	return
 	
-	Ctrl & b::
+	~Ctrl & b::
 	SendInput {Enter}
 	return
 

@@ -1,4 +1,4 @@
-;Auto-Genreated at 2015-01-19 22:12:57 +0800
+;Auto-Genreated at 2015-01-19 22:14:57 +0800
 #Include paths-8344b3.ahk
 #Include functions.ahk
 #Include autorun.ahk
