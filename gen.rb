@@ -1,6 +1,9 @@
 # encoding:gb2312
 require 'json'
 require 'erubis'
+require 'net/http'
+require 'digest/md5'
+require 'colorize'
 
 output = `es -p *system32*etc*hosts`
 if output['not']
@@ -39,7 +42,8 @@ installed = {}
 #
 # generate paths.ahk
 #
-File.open("paths.ahk",'w') do |file|
+suffix = Digest::MD5.hexdigest(Socket.gethostname.downcase)[0..5]
+File.open("paths-#{suffix}.ahk",'w') do |file|
 	file.puts ";Auto-Generated Executable Paths"
 	executables.each do |name, pattern|
 		path = search(pattern).first
@@ -52,24 +56,26 @@ File.open("paths.ahk",'w') do |file|
 			true
 		end
 	end
-end unless File.exists?('paths.ahk')
+end unless File.exists?("paths-#{suffix}.ahk")
 
 #
 # genereate menus
 #
 menus = []
+
 Dir['*.menu.json'].each do |jsonf|
 	$stdout.puts "Found menu #{jsonf}"
 	File.open(jsonf) do |file|
 		config = JSON.parse file.read
+		$stdout.puts " Hotkey=#{config['hotkey']}".green.bold
 		items = {}
 		config['items'].each do |name,path|
-			$stdout.puts "  #{path}"
-			if not File.exists?(path) and not path[/^http|^[c-z]:|^-/i]
-				basename = File.basename(path)
-				paths = search(basename)
+			if File.exists?(path) or path[/^http|^[c-z]:|^-/i] or path == '-----'
+				$stdout.puts "  #{path}"
+			else
+				paths = search(path)
 				path = paths.size > 0 ? paths.first : nil
-				$stdout.puts " =>#{path}"
+				$stdout.puts "  #{path}".red.bold
 			end
 			items[name] = path if not path.nil?
 		end
@@ -87,12 +93,13 @@ end
 #
 # finally generate main script
 #
-File.open("aztack.ahk",'w:gb2312') do |f|
+File.open("aztack.ahk",'w:gbk') do |f|
 	eruby = Erubis::Eruby.new File.read('aztack.erb')
     ctx = Erubis::Context.new
     ctx['menus'] = menus
     ctx['timers'] = timers
     ctx['installed'] = installed
+    ctx['suffix'] = suffix
     code = eruby.evaluate ctx
-	f.puts code.force_encoding('gb2312')
+	f.puts code.force_encoding('gbk')
 end

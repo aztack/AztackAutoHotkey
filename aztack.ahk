@@ -1,5 +1,5 @@
-;Auto-Genreated at 2015-01-01 09:44:36 +0800
-#Include paths.ahk
+;Auto-Genreated at 2015-01-19 13:52:35 +0800
+#Include paths-3aa6ad.ahk
 #Include functions.ahk
 #Include autorun.ahk
 
@@ -8,7 +8,7 @@
 ;-----
 menus := {}
 ;QuickMenu
-menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","D:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:Users\Administrator\AppData\Local\Youdao\Dict\Application\YodaoDict.exe","D:\Program Files (x86)\PicPick\picpick.exe","D:\Program Files (x86)\PicPick\picpick.exe","C:\Program Files (x86)\China Mobile\Fetion\Fetion.exe","D:\Program Files (x86)\FileZilla FTP Client\Filezilla.exe","C:\Program Files (x86)\Mozilla Firefox\Firefox.exe","C:\Program Files (x86)\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\AdobePhotoshopCC\Adobe Photoshop CC\Photoshop.exe","D:\Program Files\gizmo\prog\SQLiteSpy.exe","D:\prog\LINQPad\LINQPad.exe","D:\Program Files\MobipocketReader6.2\MobipocketReader_6.2.exe","D:\Program Files\Source Insight 3\Insight3.exe","D:\Program Files\todolist\ToDoList.exe"]
+menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:\Program Files\Youdao\Dict\YodaoDict.exe","C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe","C:\Program Files (x86)\PicPick\picpick.exe","C:\Program Files\China Mobile\Fetion\Fetion.exe","C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe","D:\Program Files\Firefox26\App\Firefox\firefox.exe","C:\Program Files\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\AdobePhotoshopCC\Adobe Photoshop CC\Photoshop.exe","D:\prog\sqlite expert professiona.exe","D:\prog\LINQPad4.31\LINQPad.exe","D:\Program Files\MobipocketReader_6.2.exe","D:\Program Files\Source Insight 3\Insight3.exe","D:\Program Files\ToDoList\ToDoList.exe"]
 	Menu, QuickMenu, Add, download, TheMenuHandler
 	Menu, QuickMenu, Icon,download, Shell32.dll, 4
 	Menu, QuickMenu, Add, ebook, TheMenuHandler
@@ -16,36 +16,36 @@ menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCo
 	Menu, QuickMenu, Add,,,
 	Menu, QuickMenu, Add, BCompare, TheMenuHandler
 	Menu, QuickMenu, Icon,BCompare, D:\Program Files\bcompare\BCompare.exe
-	Menu, QuickMenu, Add, ÓĞµÀÔÆ±Ê¼Ç, TheMenuHandler
-	Menu, QuickMenu, Icon,ÓĞµÀÔÆ±Ê¼Ç, D:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe
-	Menu, QuickMenu, Add, ÓĞµÀ´Êµä, TheMenuHandler
-	Menu, QuickMenu, Icon,ÓĞµÀ´Êµä, C:Users\Administrator\AppData\Local\Youdao\Dict\Application\YodaoDict.exe
+	Menu, QuickMenu, Add, æœ‰é“äº‘ç¬”è®°, TheMenuHandler
+	Menu, QuickMenu, Icon,æœ‰é“äº‘ç¬”è®°, C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe
+	Menu, QuickMenu, Add, æœ‰é“è¯å…¸, TheMenuHandler
+	Menu, QuickMenu, Icon,æœ‰é“è¯å…¸, C:\Program Files\Youdao\Dict\YodaoDict.exe
 	Menu, QuickMenu, Add, RegexBuddy, TheMenuHandler
-	Menu, QuickMenu, Icon,RegexBuddy, D:\Program Files (x86)\PicPick\picpick.exe
+	Menu, QuickMenu, Icon,RegexBuddy, C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe
 	Menu, QuickMenu, Add, PicPick, TheMenuHandler
-	Menu, QuickMenu, Icon,PicPick, D:\Program Files (x86)\PicPick\picpick.exe
+	Menu, QuickMenu, Icon,PicPick, C:\Program Files (x86)\PicPick\picpick.exe
 	Menu, QuickMenu, Add, Fetion, TheMenuHandler
-	Menu, QuickMenu, Icon,Fetion, C:\Program Files (x86)\China Mobile\Fetion\Fetion.exe
+	Menu, QuickMenu, Icon,Fetion, C:\Program Files\China Mobile\Fetion\Fetion.exe
 	Menu, QuickMenu, Add, Filezilla, TheMenuHandler
-	Menu, QuickMenu, Icon,Filezilla, D:\Program Files (x86)\FileZilla FTP Client\Filezilla.exe
+	Menu, QuickMenu, Icon,Filezilla, C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe
 	Menu, QuickMenu, Add, Firefox, TheMenuHandler
-	Menu, QuickMenu, Icon,Firefox, C:\Program Files (x86)\Mozilla Firefox\Firefox.exe
+	Menu, QuickMenu, Icon,Firefox, D:\Program Files\Firefox26\App\Firefox\firefox.exe
 	Menu, QuickMenu, Add, KMPlayer, TheMenuHandler
-	Menu, QuickMenu, Icon,KMPlayer, C:\Program Files (x86)\The KMPlayer\KMPlayer.exe
+	Menu, QuickMenu, Icon,KMPlayer, C:\Program Files\The KMPlayer\KMPlayer.exe
 	Menu, QuickMenu, Add, Astrill, TheMenuHandler
 	Menu, QuickMenu, Icon,Astrill, C:\Program Files (x86)\Astrill\astrill.exe
 	Menu, QuickMenu, Add, Photoshop, TheMenuHandler
 	Menu, QuickMenu, Icon,Photoshop, D:\Program Files\AdobePhotoshopCC\Adobe Photoshop CC\Photoshop.exe
 	Menu, QuickMenu, Add, SQLite Expert, TheMenuHandler
-	Menu, QuickMenu, Icon,SQLite Expert, D:\Program Files\gizmo\prog\SQLiteSpy.exe
+	Menu, QuickMenu, Icon,SQLite Expert, D:\prog\sqlite expert professiona.exe
 	Menu, QuickMenu, Add, LINQPad, TheMenuHandler
-	Menu, QuickMenu, Icon,LINQPad, D:\prog\LINQPad\LINQPad.exe
+	Menu, QuickMenu, Icon,LINQPad, D:\prog\LINQPad4.31\LINQPad.exe
 	Menu, QuickMenu, Add, MobiReader, TheMenuHandler
-	Menu, QuickMenu, Icon,MobiReader, D:\Program Files\MobipocketReader6.2\MobipocketReader_6.2.exe
+	Menu, QuickMenu, Icon,MobiReader, D:\Program Files\MobipocketReader_6.2.exe
 	Menu, QuickMenu, Add, Source Insight, TheMenuHandler
 	Menu, QuickMenu, Icon,Source Insight, D:\Program Files\Source Insight 3\Insight3.exe
 	Menu, QuickMenu, Add, ToDoList, TheMenuHandler
-	Menu, QuickMenu, Icon,ToDoList, D:\Program Files\todolist\ToDoList.exe
+	Menu, QuickMenu, Icon,ToDoList, D:\Program Files\ToDoList\ToDoList.exe
 ;SublimeProject
 menus["SublimeProject"] := ["D:\prog\sublime-projects\web-cp.sublime-project","E:\doc\closesource\qh\union.sublime-project","E:\doc\GitHub\rails-dev-box\sites\blog.aztack.com.sublime-project","E:\doc\GitHub\aztec-alpha\aztec-alpha.sublime-project"]
 	Menu, SublimeProject, Add, Web-CP, TheMenuHandler
@@ -54,20 +54,21 @@ menus["SublimeProject"] := ["D:\prog\sublime-projects\web-cp.sublime-project","E
 	Menu, SublimeProject, Add, Aztec-Alpha, TheMenuHandler
 ;Test
 menus["Test"] := ["http://wwh.lianmeng.360.cn/index","http://wwh.lianmeng.360.cn:8000","http://lianmeng.360.cn/index","http://lianmeng.360.cn:8000","----","E:\doc\closesource\qh\unionad\web-cp","http://cp.lianmeng.360.cn","E:\doc\closesource\qh\signuphao360_fillform.au3"]
-	Menu, Test, Add, ¿ª·¢£ºÁªÃËweb-front, TheMenuHandler
-	Menu, Test, Icon,¿ª·¢£ºÁªÃËweb-front, Shell32.dll, 14
-	Menu, Test, Add, ¿ª·¢£ºÁªÃËweb-admin, TheMenuHandler
-	Menu, Test, Icon,¿ª·¢£ºÁªÃËweb-admin, Shell32.dll, 14
-	Menu, Test, Add, ²âÊÔ£ºÁªÃËweb-front, TheMenuHandler
-	Menu, Test, Icon,²âÊÔ£ºÁªÃËweb-front, Shell32.dll, 14
-	Menu, Test, Add, ²âÊÔ£ºÁªÃËweb-admin, TheMenuHandler
-	Menu, Test, Icon,²âÊÔ£ºÁªÃËweb-admin, Shell32.dll, 14
+	Menu, Test, Add, å¼€å‘ï¼šè”ç›Ÿweb-front, TheMenuHandler
+	Menu, Test, Icon,å¼€å‘ï¼šè”ç›Ÿweb-front, Shell32.dll, 14
+	Menu, Test, Add, å¼€å‘ï¼šè”ç›Ÿweb-admin, TheMenuHandler
+	Menu, Test, Icon,å¼€å‘ï¼šè”ç›Ÿweb-admin, Shell32.dll, 14
+	Menu, Test, Add, æµ‹è¯•ï¼šè”ç›Ÿweb-front, TheMenuHandler
+	Menu, Test, Icon,æµ‹è¯•ï¼šè”ç›Ÿweb-front, Shell32.dll, 14
+	Menu, Test, Add, æµ‹è¯•ï¼šè”ç›Ÿweb-admin, TheMenuHandler
+	Menu, Test, Icon,æµ‹è¯•ï¼šè”ç›Ÿweb-admin, Shell32.dll, 14
 	Menu, Test, Add,,,
 	Menu, Test, Add, CP, TheMenuHandler
-	Menu, Test, Add, CPÍøÕ¾, TheMenuHandler
-	Menu, Test, Icon,CPÍøÕ¾, Shell32.dll, 14
-	Menu, Test, Add, ÌîĞ´Ö±¿Í×¢²á±í¸ñ, TheMenuHandler
-	Menu, Test, Icon,ÌîĞ´Ö±¿Í×¢²á±í¸ñ, lib\au3.ico
+	Menu, Test, Icon,CP, Shell32.dll, 4
+	Menu, Test, Add, CPç½‘ç«™, TheMenuHandler
+	Menu, Test, Icon,CPç½‘ç«™, Shell32.dll, 14
+	Menu, Test, Add, å¡«å†™ç›´å®¢æ³¨å†Œè¡¨æ ¼, TheMenuHandler
+	Menu, Test, Icon,å¡«å†™ç›´å®¢æ³¨å†Œè¡¨æ ¼, lib\au3.ico
 
 ;-----------
 ; timers
