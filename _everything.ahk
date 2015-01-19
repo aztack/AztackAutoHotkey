@@ -18,5 +18,4 @@
 		IfExist %dir%
 			Run, cmd /k cd /d "%dir%"
 	Return
-	
 #IfWinActive

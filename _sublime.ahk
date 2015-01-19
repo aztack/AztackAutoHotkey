@@ -43,3 +43,4 @@ get_path_in_sublime_title()
 		WinActivate,ahk_class PX_WINDOW_CLASS
 	return
 #IfWinActive
+

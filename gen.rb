@@ -31,7 +31,8 @@ executables = {
 	'ToDoList' => '*todolist*todolist.exe',
 	'Everything' => '*everything*everything.exe',
 	'Chrome' => '*google*\chrome.exe',
-	'DM2' => '*dm2*DM2.exe"'
+	'DM2' => '*dm2*DM2.exe"',
+	'YoudaoDict' => '*Youdao*yodaodict.exe'
 }
 installed = {}
 
@@ -93,5 +94,5 @@ File.open("aztack.ahk",'w:gb2312') do |f|
     ctx['timers'] = timers
     ctx['installed'] = installed
     code = eruby.evaluate ctx
-	f.puts code.encode('gb2312')
+	f.puts code.force_encoding('gb2312')
 end
