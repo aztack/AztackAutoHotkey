@@ -418,7 +418,7 @@ return
 	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
 	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
 	X := MonitorWorkAreaLeft + Width
-	Y := MonitorWorkAreaTop
+	Y := MonitorWorkAreaTop + Height
 	WinMove,A,,0,%Y%,%Width%,%Height%
 return
 
