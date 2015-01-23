@@ -289,6 +289,189 @@ return
 	Process, Close, %PID%
 return
 
+
+;monitor1
+#Numpad7::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft
+	Y := MonitorWorkAreaTop
+	WinMove,A,,%MonitorWorkAreaLeft%,%MonitorWorkAreaTop%,%Width%,%Height%
+return
+
+#Numpad8::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width
+	Y := MonitorWorkAreaTop
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+#Numpad9::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width + Width
+	Y := MonitorWorkAreaTop
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+#Numpad4::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft
+	Y := MonitorWorkAreaTop +  Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+#Numpad5::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width
+	Y := MonitorWorkAreaTop +  Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+#Numpad6::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width + Width
+	Y := MonitorWorkAreaTop +  Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+#Numpad1::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft
+	Y := MonitorWorkAreaTop +  Height  + Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+#Numpad2::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width
+	Y := MonitorWorkAreaTop +  Height + Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+#Numpad3::
+	index := 1
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width + Width
+	Y := MonitorWorkAreaTop +  Height + Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+;monitor2
+^!Numpad7::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft
+	Y := MonitorWorkAreaTop
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+^!Numpad8::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width
+	Y := MonitorWorkAreaTop
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+^!Numpad9::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width + Width
+	Y := MonitorWorkAreaTop
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+^!Numpad4::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width
+	Y := MonitorWorkAreaTop
+	WinMove,A,,0,%Y%,%Width%,%Height%
+return
+
+^!Numpad5::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width
+	Y := MonitorWorkAreaTop +  Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+^!Numpad6::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width + Width
+	Y := MonitorWorkAreaTop +  Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+^!Numpad1::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft
+	Y := MonitorWorkAreaTop +  Height + Height
+	WinMove,A,,0,%Y%,%Width%,%Height%
+return
+
+^!Numpad2::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width
+	Y := MonitorWorkAreaTop +  Height + Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
+^!Numpad3::
+	index := 2
+	SysGet, MonitorWorkArea, MonitorWorkArea, %index%
+	Width  := (MonitorWorkAreaRight  - MonitorWorkAreaLeft)  / 3
+	Height := (MonitorWorkAreaBottom - MonitorWorkAreaTop)   / 3
+	X := MonitorWorkAreaLeft + Width + Width
+	Y := MonitorWorkAreaTop +  Height + Height
+	WinMove,A,,%X%,%Y%,%Width%,%Height%
+return
+
 ;Convert whatever's on the clipboard to plain text (no formatting) and then pastes.
 #v::
 	old = %ClipBoardAll%
