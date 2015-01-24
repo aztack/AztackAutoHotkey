@@ -1,7 +1,6 @@
 !1:: Run %SublimeText%
 !+s:: Run %XShell%
 !+o:: Run %Outlook%
-!+l:: Run %Lingoes%
 !+b:: Run %EditPlus%
 !+t:: Run %Thunder%
 !+q:: Run %QQ%
