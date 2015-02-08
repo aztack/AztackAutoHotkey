@@ -1,7 +1,6 @@
 !1:: Run %SublimeText%
 !+s:: Run %XShell%
 !+o:: Run %Outlook%
-!+l:: Run %Lingoes%
 !+b:: Run %EditPlus%
 !+t:: Run %Thunder%
 !+q:: Run %QQ%
@@ -34,4 +33,19 @@ return
 #IfWinActive ahk_class Notepad
 	Esc::Send !{F4}
 #IfWinActive
+
+;360yunpan
+!+2::
+	DetectHiddenWindows Off
+	IfWinExist, ahk_class 360WangPanMainDlg
+	{
+		WinHide, ahk_class 360WangPanMainDlg
+		
+	} else {
+		WinShow, ahk_class 360WangPanMainDlg
+	}
+	DetectHiddenWindows On
+return
+
+
 
