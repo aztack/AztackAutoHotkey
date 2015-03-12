@@ -1,3 +1,16 @@
+Toggle_HiddenFiles_Display(){
+  RootKey = HKEY_CURRENT_USER
+  SubKey  = Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+
+  RegRead, HiddenFiles_Status, % RootKey, % SubKey, Hidden
+
+  if HiddenFiles_Status = 2
+      RegWrite, REG_DWORD, % RootKey, % SubKey, Hidden, 1 
+  else 
+      RegWrite, REG_DWORD, % RootKey, % SubKey, Hidden, 2
+  PostMessage, 0x111, 41504,,, ahk_id %ID%
+}
+
 ;copy path from explorer
 #IfWinActive ahk_class CabinetWClass
 	^!c::
@@ -16,5 +29,10 @@
 	
 	~Alt & WheelDown::
 	SendInput {Alt down}{Left} {Alt up}
+	return
+	
+	^h::
+		Toggle_HiddenFiles_Display()
+		SendInput {F5}
 	return
 #IfWinActive
