@@ -40,6 +40,7 @@ return
 		
 	} else {
 		WinShow, ahk_class 360WangPanMainDlg
+		WinActivate, ahk_class 360WangPanMainDlg
 	}
 	DetectHiddenWindows On
 return

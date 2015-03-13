@@ -135,6 +135,8 @@ RestoreAllWindowsInOrder(Resolution)
 #2:: Run d:
 #3:: Run e:
 #4:: Run f:
+#5:: Run g:
+#6:: Run h:
 
 #F10::
 Run lib\toggleTaskbarShowHide.au3
