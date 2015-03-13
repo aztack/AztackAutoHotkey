@@ -30,9 +30,6 @@ return
 	Esc::Send !{F4}
 #IfWinActive
 
-#IfWinActive ahk_class Notepad
-	Esc::Send !{F4}
-#IfWinActive
 
 ;360yunpan
 !+2::

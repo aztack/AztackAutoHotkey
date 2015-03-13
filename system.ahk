@@ -431,6 +431,20 @@ return
 	MoveWindowToMonitor(2,1,3,0,2)
 return
 
+
+^#Up::
+	MouseMove,0,-10,0,R
+return
+^#Down::
+	MouseMove,0,10,0,R
+return
+^#Left::
+	MouseMove,-10,0,0,R
+return
+^#Right::
+	MouseMove,0,10,0,R
+return
+
 ;Convert whatever's on the clipboard to plain text (no formatting) and then pastes.
 #v::
 	old = %ClipBoardAll%
