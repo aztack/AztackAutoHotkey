@@ -444,7 +444,7 @@ return
 	MouseMove,-10,0,0,R
 return
 ^#Right::
-	MouseMove,0,10,0,R
+	MouseMove,10,0,0,R
 return
 
 ;Convert whatever's on the clipboard to plain text (no formatting) and then pastes.

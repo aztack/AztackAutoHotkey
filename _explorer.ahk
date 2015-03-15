@@ -18,6 +18,16 @@ Toggle_HiddenFiles_Display(){
 		Run, cmd /k cd /d "%dir%"
 	Return
 	
+	;save clipboard to txt
+	^+v::
+		dir := Explorer_GetPath()
+		path = %dir%\clipboard_%A_NOW%.txt
+		MsgBox,0,0,%path%
+		text = %ClipBoard%
+		ClipBoard = %text% ; Convert to text
+		FileAppend, %Clipboard%,%path%
+	Return
+	
 	;copy path of selected 
 	#c::
 		Clipboard := Explorer_GetSelected()
@@ -35,4 +45,5 @@ Toggle_HiddenFiles_Display(){
 		Toggle_HiddenFiles_Display()
 		SendInput {F5}
 	return
+	
 #IfWinActive
