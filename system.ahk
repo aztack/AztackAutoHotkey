@@ -434,18 +434,16 @@ return
 return
 
 
-^#Up::
-	MouseMove,0,-10,0,R
-return
-^#Down::
-	MouseMove,0,10,0,R
-return
-^#Left::
-	MouseMove,-10,0,0,R
-return
-^#Right::
-	MouseMove,10,0,0,R
-return
+^#Up::MouseMove,0,-10,0,R
+^#Down::MouseMove,0,10,0,R
+^#Left::MouseMove,-10,0,0,R
+^#Right::MouseMove,10,0,0,R
+^+#Up::MouseMove,0,-100,0,R
+^+#Down::MouseMove,0,100,0,R
+^+#Left::MouseMove,-100,0,0,R
+^+#Right::MouseMove,100,0,0,R
+
+
 
 ;Convert whatever's on the clipboard to plain text (no formatting) and then pastes.
 #v::
