@@ -14,7 +14,8 @@ AutoRun(exename,p)
 	{
 		If ! errorLevel
 		{
-			Run %p%
+			IfExist, %p%
+				Run %p%
 		}
 	}
 }
