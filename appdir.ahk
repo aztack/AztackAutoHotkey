@@ -45,5 +45,8 @@ return
 	DetectHiddenWindows On
 return
 
-
+;Photoshop
+!0::
+	WinActivate,ahk_class Photoshop,,,
+return
 

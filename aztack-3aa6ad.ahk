@@ -2,7 +2,6 @@
 #Include paths-3aa6ad.ahk
 #Include functions.ahk
 #Include autorun.ahk
-
 ;-----
 ;Menus
 ;-----
@@ -91,7 +90,7 @@ SetTimer sublime_timer_ahk, On
 #Include _explorer.ahk
 #Include _xshell.ahk
 #Include _sublime.ahk
-
+#Include hotstrings.ahk
 
 ;hotkeys for menus
 !d:: Menu,QuickMenu,Show
