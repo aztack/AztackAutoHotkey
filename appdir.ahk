@@ -32,7 +32,7 @@ return
 
 
 ;360yunpan
-!+2::
+!+8::
 	DetectHiddenWindows Off
 	IfWinExist, ahk_class 360WangPanMainDlg
 	{
