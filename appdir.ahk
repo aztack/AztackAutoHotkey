@@ -50,3 +50,8 @@ return
 	WinActivate,ahk_class Photoshop,,,
 return
 
+;ZoOmeAsure
+^!+z::
+	Run D:\program files\ZoOmeAsure\ZoOmeAsure.exe
+return
+

@@ -1,13 +1,14 @@
-;Auto-Genreated at 2015-04-16 09:42:37 +0800
+;Auto-Genreated at 2015-07-09 08:52:50 +0800
 #Include paths-3aa6ad.ahk
 #Include functions.ahk
 #Include autorun.ahk
+
 ;-----
 ;Menus
 ;-----
 menus := {}
 ;QuickMenu
-menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:\Program Files\Youdao\Dict\YodaoDict.exe","C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe","C:\Program Files (x86)\PicPick\picpick.exe","C:\Program Files\China Mobile\Fetion\Fetion.exe","C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe","D:\Program Files\Firefox26\App\Firefox\firefox.exe","C:\Program Files\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\AdobePhotoshopCC\Adobe Photoshop CC\Photoshop.exe","D:\Program Files\FastStone Image Viewer Portable v5.3\FSViewer.exe","D:\prog\sqlite expert professiona.exe","D:\prog\LINQPad4.31\LINQPad.exe","D:\Program Files\MobipocketReader_6.2.exe","D:\Program Files\Source Insight 3\Insight3.exe","D:\Program Files\ToDoList\ToDoList.exe"]
+menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCompare.exe","C:\Program Files (x86)\Youdao\YoudaoNote\RunYNote.exe","C:\Program Files\Youdao\Dict\YodaoDict.exe","C:\Program Files (x86)\Just Great Software\RegexBuddy3\RegexBuddy.exe","C:\Program Files (x86)\PicPick\picpick.exe","C:\Program Files\China Mobile\Fetion\Fetion.exe","C:\Program Files (x86)\FileZilla FTP Client\filezilla.exe","D:\Program Files\Firefox26\App\Firefox\firefox.exe","C:\Program Files\The KMPlayer\KMPlayer.exe","C:\Program Files (x86)\Astrill\astrill.exe","D:\Program Files\AdobePhotoshopCC\Adobe Photoshop CC\Photoshop.exe","D:\Program Files\FastStone Image Viewer Portable v5.3\FSViewer.exe","D:\prog\sqlite expert professiona.exe","D:\prog\LINQPad4.31\LINQPad.exe","D:\Program Files\MobipocketReader_6.2.exe","D:\Program Files\Source Insight 3\Insight3.exe","D:\Program Files\ToDoList\ToDoList.exe","D:\Program Files\SwitchHosts\SwitchHosts.exe"]
 	Menu, QuickMenu, Add, download, TheMenuHandler
 	Menu, QuickMenu, Icon,download, Shell32.dll, 4
 	Menu, QuickMenu, Add, ebook, TheMenuHandler
@@ -47,6 +48,8 @@ menus["QuickMenu"] := ["f:\dl","e:\ebook","-----","D:\Program Files\bcompare\BCo
 	Menu, QuickMenu, Icon,Source Insight, D:\Program Files\Source Insight 3\Insight3.exe
 	Menu, QuickMenu, Add, ToDoList, TheMenuHandler
 	Menu, QuickMenu, Icon,ToDoList, D:\Program Files\ToDoList\ToDoList.exe
+	Menu, QuickMenu, Add, SiwtchHosts, TheMenuHandler
+	Menu, QuickMenu, Icon,SiwtchHosts, D:\Program Files\SwitchHosts\SwitchHosts.exe
 ;SublimeProject
 menus["SublimeProject"] := ["D:\prog\sublime-projects\web-cp.sublime-project","E:\doc\closesource\qh\union.sublime-project","E:\doc\GitHub\rails-dev-box\sites\blog.aztack.com.sublime-project","E:\doc\GitHub\aztec-alpha\aztec-alpha.sublime-project"]
 	Menu, SublimeProject, Add, Web-CP, TheMenuHandler

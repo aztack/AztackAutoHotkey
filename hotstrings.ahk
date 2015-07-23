@@ -1,5 +1,5 @@
 ::curdate::
-FormatTime, CurrentDateTime,, yyyy/M/d h:mm tt
+FormatTime, CurrentDateTime,, yyyy/MM/dd hh:mm:ss
 SendInput %CurrentDateTime%
 return
 
