@@ -46,12 +46,8 @@ return
 return
 
 ;Photoshop
-!0::
-	WinActivate,ahk_class Photoshop,,,
-return
+!0:: WinActivate,ahk_class Photoshop,,,
 
 ;ZoOmeAsure
-^!+z::
-	Run D:\program files\ZoOmeAsure\ZoOmeAsure.exe
-return
+^!+z:: Run D:\program files\ZoOmeAsure\ZoOmeAsure.exe
 
