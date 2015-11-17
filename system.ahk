@@ -1,6 +1,7 @@
 #e::
  Run, d:
 return
+
 #r::
 Run C:\windows\syswow64\rundll32.exe shell32.dll`,#61
 return
@@ -176,8 +177,12 @@ return
 ;return
 
 
-setproxy(state = "Toggle"){
-
+setproxy(state = "Toggle", which = 0){
+if (which = 0) {
+	proxy := "http=10.16.13.18:8080;https=10.16.13.18:8080;socks=10.16.13.18:8080"
+} else {
+	proxy := "http=127.0.0.1:1080;https=127.0.0.1:1080;socks=127.0.0.1:1080"
+}
 if (state ="ON" or state = 1)
 regwrite,REG_DWORD,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,Proxyenable,1
   else if (state="OFF" or state = 0)
@@ -192,7 +197,7 @@ regwrite,REG_DWORD,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Setti
 	  {
 		TrayTip,,ÄãÔÚÇ½Íâ, 2, 17
         regwrite,REG_DWORD,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,Proxyenable,1
-		regwrite,REG_SZ,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,ProxyServer,http=10.16.13.18:8080;https=10.16.13.18:8080;socks=10.16.13.18:8080
+		regwrite,REG_SZ,HKCU,Software\Microsoft\Windows\CurrentVersion\Internet Settings,ProxyServer, %proxy%
 	  }
   }
   dllcall("wininet\InternetSetOptionW","int","0","int","39","int","0","int","0")

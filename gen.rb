@@ -35,7 +35,9 @@ executables = {
 	'Everything' => '*everything*everything.exe',
 	'Chrome' => '*google*\chrome.exe',
 	'DM2' => '*dm2*DM2.exe"',
-	'YoudaoDict' => '*Youdao*yodaodict.exe'
+	'YoudaoDict' => '*Youdao*yodaodict.exe',
+	'WeChat' => '*Tencent*WeChat.exe',
+	'Fetion' => '*China Mobile*Fetion.exe'
 }
 installed = {}
 

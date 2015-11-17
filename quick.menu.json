@@ -23,5 +23,6 @@
 		["Source Insight","Insight3.exe"],
 		["ToDoList","ToDoList.exe"],
 		["Fiddler","*Fiddler*Fiddler.exe"]
+		["SiwtchHosts","SwitchHosts.exe"]
 	]
 }
