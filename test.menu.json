@@ -2,14 +2,6 @@
 	"name":"Test",
 	"hotkey": "!Numpad0",
 	"items" : [
-		["开发：联盟web-front","http://wwh.lianmeng.360.cn/index"],
-		["开发：联盟web-admin","http://wwh.lianmeng.360.cn:8000"],
-		["测试：联盟web-front","http://lianmeng.360.cn/index"],
-		["测试：联盟web-admin","http://lianmeng.360.cn:8000"],
-		["----","----"],
-		["CP","E:\\doc\\closesource\\qh\\unionad\\web-cp"],
-		["CP网站","http://cp.lianmeng.360.cn"],
-		["----","----"],
-		["填写直客注册表格","E:\\doc\\closesource\\qh\\signuphao360_fillform.au3"]
+		["开发：小麦商城测试环境","http://wap.tmall.imxiaomai.com/page/newv4/index.html"]
 	]
 }

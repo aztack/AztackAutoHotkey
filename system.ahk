@@ -9,22 +9,23 @@ ResList=
 WinPosArray0=0
 return
 
-#d::
-IfNotInString, ResList, |Desktop|
-	{
-	; Show Desktop
-	StoreAllWindowsInOrder("Desktop")
-	WinMinimizeAll
-	}
-Else
-	{
-	; Restore Previous Windows
-	StoreAllWindowsInOrder("DesktopUpdate")
-	WinMinimizeAllUndo	
-	RestoreAllWindowsInOrder("Desktop")
-	RestoreAllWindowsInOrder("DesktopUpdate")
-	}
-return
+/* #d::
+ * IfNotInString, ResList, |Desktop|
+ * 	{
+ * 	; Show Desktop
+ * 	StoreAllWindowsInOrder("Desktop")
+ * 	WinMinimizeAll
+ * 	}
+ * Else
+ * 	{
+ * 	; Restore Previous Windows
+ * 	StoreAllWindowsInOrder("DesktopUpdate")
+ * 	WinMinimizeAllUndo	
+ * 	RestoreAllWindowsInOrder("Desktop")
+ * 	RestoreAllWindowsInOrder("DesktopUpdate")
+ * 	}
+ * return
+ */
 
 
 
@@ -149,21 +150,30 @@ return
 	Reload
 return
 
-;toggle proxy
+;vpn on
 ^!F12::
-setproxy()
+ Run, vpnon.bat
 return
 
 ^!+F12::
-if ( regread("HKCU","Software\Microsoft\Windows\CurrentVersion\Internet Settings","Proxyenable") = 1 ) 
-{
-	TrayTip,,你在墙外, 2, 17
-}
-else
-{
-	TrayTip,,你在墙内, 2, 17
-}
+ Run, vpnoff.bat
 return
+
+;toggle proxy
+;^!F12::
+;setproxy()
+;return
+
+;^!+F12::
+;if ( regread("HKCU","Software\Microsoft\Windows\CurrentVersion\Internet Settings","Proxyenable") = 1 ) 
+;{
+;	TrayTip,,你在墙外, 2, 17
+;}
+;else
+;{
+;	TrayTip,,你在墙内, 2, 17
+;}
+;return
 
 
 setproxy(state = "Toggle"){
@@ -195,9 +205,9 @@ RegRead(RootKey, SubKey, ValueName = "") {
    Return, v
 }
 
-~#LButton::
- setproxy()
-Return
+;~#LButton::
+; setproxy()
+;Return
 
 ;
 ;run path/url on clipboard
@@ -510,3 +520,11 @@ Return
     ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
 ;Return
 
+SetTimer, KillGWX, 10000
+return
+
+KillGWX:
+run, taskkill /f /im gwx.exe,,Hide
+run, taskkill /f /im kkv.exe,,Hide
+run, taskkill /f /im SogouCloud.exe,,Hide
+return

@@ -32,18 +32,18 @@ return
 
 
 ;360yunpan
-!+2::
-	DetectHiddenWindows Off
-	IfWinExist, ahk_class 360WangPanMainDlg
-	{
-		WinHide, ahk_class 360WangPanMainDlg
-		
-	} else {
-		WinShow, ahk_class 360WangPanMainDlg
-		WinActivate, ahk_class 360WangPanMainDlg
-	}
-	DetectHiddenWindows On
-return
+;!+2::
+;	DetectHiddenWindows Off
+;	IfWinExist, ahk_class 360WangPanMainDlg
+;	{
+;		WinHide, ahk_class 360WangPanMainDlg
+;		
+;	} else {
+;		WinShow, ahk_class 360WangPanMainDlg
+;		WinActivate, ahk_class 360WangPanMainDlg
+;	}
+;	DetectHiddenWindows On
+;return
 
 
 

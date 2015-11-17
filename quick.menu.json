@@ -21,6 +21,7 @@
 		["LINQPad","LINQPad.exe"],
 		["MobiReader","*MobipocketReader*.exe"],
 		["Source Insight","Insight3.exe"],
-		["ToDoList","ToDoList.exe"]
+		["ToDoList","ToDoList.exe"],
+		["Fiddler","*Fiddler*Fiddler.exe"]
 	]
 }
