@@ -2,6 +2,10 @@
 	"name":"Test",
 	"hotkey": "!Numpad0",
 	"items" : [
-		["开发：小麦商城测试环境","http://wap.tmall.imxiaomai.com/page/newv4/index.html"]
+		["开发：小麦商城测试环境","http://wap.tmall.imxiaomai.com/page/newv4/index.html"],
+		["Gitlab Auth","E:/doc/info/xiaomai/gitlabauth.au3"],
+		["login Test Server","E:/doc/info/xiaomai/loginTest.au3"],
+		["Push Origin Master","E:/doc/info/xiaomai/pushorigin.au3"],
+		["Pull Origin Master","E:/doc/info/xiaomai/pullorigin.au3"]
 	]
 }

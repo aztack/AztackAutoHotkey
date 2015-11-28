@@ -5,24 +5,26 @@
 		["download","f:\\dl"],
 		["ebook","e:\\ebook"],
 		["-----","-----"],
-		["BCompare","BCompare.exe"],
 		["有道云笔记","*YoudaoNote*RunYNote.exe"],
 		["有道词典","YodaoDict.exe"],
-		["RegexBuddy","*RegexBuddy*RegexBuddy.exe"],
 		["PicPick","picpick.exe"],
-		["Fetion","*Fetion*Fetion.exe"],
 		["Filezilla","Filezilla.exe"],
 		["Firefox","*firefox*firefox.exe"],
 		["KMPlayer","KMPlayer.exe"],
+		["QQPlayer","qqplayer.exe"],
 		["Astrill","astrill.exe"],
 		["Photoshop","Photoshop.exe"],
-		["FSViewer","*FastStone*Viewer*FSViewer.exe"],
+		["FSViewer","*FastStone*Viewer*FSViewer.exe"],		
+		["MobiReader","*MobipocketReader*.exe"],
+		["-----","-----"],
+		["BCompare","BCompare.exe"],
+		["RegexBuddy","*RegexBuddy*RegexBuddy.exe"],
 		["SQLite Expert","sqlite expert professiona.exe"],
 		["LINQPad","LINQPad.exe"],
-		["MobiReader","*MobipocketReader*.exe"],
 		["Source Insight","Insight3.exe"],
 		["ToDoList","ToDoList.exe"],
-		["Fiddler","*Fiddler*Fiddler.exe"]
-		["SiwtchHosts","SwitchHosts.exe"]
+		["Fiddler","*Fiddler*Fiddler.exe"],
+		["SiwtchHosts","SwitchHosts.exe"],
+		["Cmder","cmder.exe"]
 	]
 }
