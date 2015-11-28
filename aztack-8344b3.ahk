@@ -1,4 +1,4 @@
-;Auto-Genreated at 2015-11-28 17:40:14 +0800
+;Auto-Genreated at 2015-11-28 19:32:32 +0800
 #Include paths-8344b3.ahk
 #Include functions.ahk
 #Include autorun.ahk
@@ -91,6 +91,7 @@ SetTimer sublime_timer_ahk, On
 #Include _xshell.ahk
 #Include _sublime.ahk
 #Include _vscode.ahk
+#Include _cmder.ahk
 #Include hotstrings.ahk
 
 ;hotkeys for menus
