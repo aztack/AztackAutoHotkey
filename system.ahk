@@ -144,6 +144,10 @@ RestoreAllWindowsInOrder(Resolution)
 Run lib\toggleTaskbarShowHide.au3
 return
 
+#F11::
+Run lib\closeWindowUnderCursor.au3
+return
+
 ;
 ;reload this script
 ;

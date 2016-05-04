@@ -59,6 +59,17 @@
 	SendInput {Enter}
 	return
 
+	!+/::
+	SendInput git status{Enter}
+	return
+	
+	!+.::
+	SendInput git branch{ENTER}
+	return
+	
+	^!/::
+	SendInput dir{ENTER}
+	return
 #IfWinActive
 
 #IfWinActive ahk_class VirtualConsoleClass
@@ -122,4 +133,15 @@
 	SendInput {Enter}
 	return
 
+	!+/::
+	SendInput git status{Enter}
+	return
+	
+	!+.::
+	SendInput git branch{ENTER}
+	return
+	
+	^!/::
+	SendInput dir{ENTER}
+	return
 #IfWinActive

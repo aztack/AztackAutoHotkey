@@ -55,4 +55,13 @@ return
 	SendEvent {F12}
 	return
 	
+	~!+l::
+	  SendEvent {Ctrl down}l{Ctrl up}
+	  Sleep 50
+	  SendEvent {Ctrl down}c{Ctrl up}
+	  text = %ClipBoard%
+	  StringReplace, text, text, localhost, %A_IPAddress1%
+	  ClipBoard = %text%
+	return
+	
 #IfWinActive

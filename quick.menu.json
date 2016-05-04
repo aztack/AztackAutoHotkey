@@ -4,6 +4,8 @@
 	"items" : [
 		["download","f:\\dl"],
 		["ebook","e:\\ebook"],
+		["prog", "d:\\prog"],
+		["vm\\projects","d:\\vm\\projects"],
 		["-----","-----"],
 		["有道云笔记","*YoudaoNote*RunYNote.exe"],
 		["有道词典","YodaoDict.exe"],
@@ -13,7 +15,7 @@
 		["KMPlayer","KMPlayer.exe"],
 		["QQPlayer","qqplayer.exe"],
 		["Astrill","astrill.exe"],
-		["Photoshop","Photoshop.exe"],
+		["Photoshop","PhotoshopPortable.exe"],
 		["FSViewer","*FastStone*Viewer*FSViewer.exe"],		
 		["MobiReader","*MobipocketReader*.exe"],
 		["-----","-----"],
@@ -25,6 +27,7 @@
 		["ToDoList","ToDoList.exe"],
 		["Fiddler","*Fiddler*Fiddler.exe"],
 		["SiwtchHosts","SwitchHosts.exe"],
+		["Navicat Premium","*Navicat*Premium*navicat.exe"],
 		["Cmder","cmder.exe"]
 	]
 }
