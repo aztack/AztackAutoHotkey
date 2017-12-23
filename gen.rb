@@ -5,7 +5,7 @@ require 'net/http'
 require 'digest/md5'
 require 'colorize'
 
-output = `es -p *system32*etc*hosts`
+output = `es.exe -p *system32*etc*hosts`
 if output['not']
 	$stdout.puts output
 	$stdout.puts "Run Everything if you already installed, otherwise download from http://www.voidtools.com/download.htm"
@@ -13,7 +13,7 @@ if output['not']
 end
 	
 def search(pattern)
-	`es -p "#{pattern}"`.split("\n")
+	`es.exe -p "#{pattern}"`.split("\n")
 end
 
 executables = {
