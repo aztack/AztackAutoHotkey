@@ -15,7 +15,7 @@
 	}
 return
 !t:: Run Taskmgr
-!3:: Run Mspaint
+!3:: WinActivate, ahk_class ConsoleWindowClass
 !5:: Run Calc
 
 !c:: Run e:\doc
