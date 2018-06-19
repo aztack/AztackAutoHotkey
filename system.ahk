@@ -1,7 +1,3 @@
-#e::
- Run, d:
-return
-
 #r::
 Run C:\windows\syswow64\rundll32.exe shell32.dll`,#61
 return
@@ -133,12 +129,12 @@ RestoreAllWindowsInOrder(Resolution)
 }
 
 ;hotkeys for openning drive with win+number
-#1:: Run c:
-#2:: Run d:
-#3:: Run e:
-#4:: Run f:
-#5:: Run g:
-#6:: Run h:
+;#1:: Run c:
+;#2:: Run d:
+;#3:: Run e:
+;#4:: Run f:
+;#5:: Run g:
+;#6:: Run h:
 
 #F10::
 Run lib\toggleTaskbarShowHide.au3

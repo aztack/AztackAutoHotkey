@@ -19,7 +19,7 @@ return
 !5:: Run Calc
 
 !c:: Run e:\doc
-!z:: Run d:\program files
+; !z:: Run d:\program files
 !x:: Run e:\doc\github
 
 ;edit specific files
