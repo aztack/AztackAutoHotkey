@@ -7,7 +7,7 @@ RAlt::
 	SendInput /
 return
 RControl::
-    SendInput '
+    SendInput "
 return
 
 LAlt & z::
@@ -53,6 +53,31 @@ return
     return
 
 #IfWinActive
+
+LAlt & 7::
+ CoordMode, Mouse, Screen
+ MouseMove, (A_ScreenWidth // 4), (A_ScreenHeight // 4)
+return
+
+LAlt & 8::
+ CoordMode, Mouse, Screen
+ MouseMove, (A_ScreenWidth // 4 * 3), (A_ScreenHeight // 4)
+return
+
+LAlt & 9::
+ CoordMode, Mouse, Screen
+ MouseMove, (A_ScreenWidth // 4), (A_ScreenHeight // 4 * 3)
+return
+
+LAlt & 0::
+ CoordMode, Mouse, Screen
+ MouseMove, (A_ScreenWidth // 4 * 3), (A_ScreenHeight // 4 * 3)
+return
+
+LAlt & 6::
+ CoordMode, Mouse, Screen
+ MouseMove, 1350,1150
+return
 
 ; !1:: WinActivate, ahk_class PX_WINDOW_CLASS
 
