@@ -79,6 +79,11 @@ LAlt & 6::
  MouseMove, 1350,1150
 return
 
+LWin & 0::
+ CoordMode, Mouse, Screen
+ MouseMove, 1880,10
+return
+
 ; !1:: WinActivate, ahk_class PX_WINDOW_CLASS
 
 #Include sleep-hibernate.ahk
